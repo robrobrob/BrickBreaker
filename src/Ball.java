@@ -1,10 +1,12 @@
 import sun.plugin2.message.GetAppletMessage;
 
+import java.awt.geom.Point2D;
+
 /**
  * Created by Robert on 3/10/17.
  */
 public class Ball {
-	Location ballLoc;
+	Point2D.Float ballLoc;
 	float ballAngle;
 	int speed;
 //consstructors
@@ -14,7 +16,7 @@ public class Ball {
 		speed = 0;
 	}
 //getters
-	public Location getBallLoc(){
+	public Point2D.Float getBallLoc(){
 		return ballLoc;
 	}
 	public float getBallAngle(){
@@ -24,7 +26,7 @@ public class Ball {
 		return speed;
 	}
 //setters
-	public void setBallLoc(Location newLoc){
+	public void setBallLoc(Point2D.Float newLoc){
 		ballLoc = newLoc;
 	}
 	public void setBallLoc(float xPos, float yPos){
