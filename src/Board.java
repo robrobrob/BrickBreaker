@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.awt.geom.Point2D;
+
 /**
  * Created by Robert on 3/10/17.
  */
@@ -5,7 +8,7 @@ public class Board {
 	float xPos;
 	boolean canMove;
 	public Board(){
-		float xPos = 0;
+		xPos = 500;
 		boolean canMove = false;
 	}
 //getters

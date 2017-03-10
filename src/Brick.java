@@ -1,4 +1,5 @@
 import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
 
 /**
  * Created by Robert on 3/10/17.
@@ -8,7 +9,7 @@ public class Brick {
 	String type;
 	float brickAngle;
 	int health;
-	Area brickArea;
+	Rectangle2D.Float brickArea;
 //constructors
 	public Brick(){
 		brickLoc = null;
@@ -30,7 +31,7 @@ public class Brick {
 	public int getHealth(){
 		return health;
 	}
-	public Area getBrickArea(){
+	public Rectangle2D.Float getBrickArea(){
 		return brickArea;
 	}
 //setters
@@ -49,11 +50,13 @@ public class Brick {
 	public void setHealth(int newHealth){
 		health = newHealth;
 	}
-	public void setArea(Area newArea){
+	public void setArea(Rectangle2D.Float newArea){
 		brickArea = newArea;
 	}
 	public void setArea(Point2D.Float newLoc, float newXSize, float newYSize){
-		brickArea = new Area(newLoc,newXSize,newYSize);
+		float x = newLoc.x;
+		float y = newLoc.y;
+		brickArea = new Rectangle2D.Float(x,y,newXSize,newYSize);
 	}
 }
 

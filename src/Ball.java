@@ -30,7 +30,7 @@ public class Ball {
 		ballLoc = newLoc;
 	}
 	public void setBallLoc(float xPos, float yPos){
-		ballLoc = new Location(xPos,yPos);
+		ballLoc = new Point2D.Float(xPos,yPos);
 	}
 	public void setBallAngle(float newAngle){
 		ballAngle = newAngle;
