@@ -12,13 +12,17 @@ import java.awt.geom.Point2D;
 public class TheComponent extends JComponent {
 	public BrickBreaker brickBreaker;
 	public PlaySpace space;
+//	public JFrame jFrame = brickBreaker.getFrame();
+//	public JPanel jPanel = brickBreaker.getFrame().getJPanel();
 //Constructor
 	public TheComponent(BrickBreaker brickBreaker){
 		this.brickBreaker = brickBreaker;
 		space = brickBreaker.getPlaySpace();
 		setFocusable(true);
+//		jPanel.
 		repaint();
 	}
+//TODO: make paintComponent actually get called.
 	@Override
 	public void paintComponent(Graphics g){
 		this.space = brickBreaker.getPlaySpace();
@@ -32,6 +36,7 @@ public class TheComponent extends JComponent {
 		g.setColor(Color.BLACK);
 		g.fillRect(5,0,805,800);
 	}
+//TODO: Finish draw ball, board, others.
 	private void drawBall(Graphics g){
 
 	}

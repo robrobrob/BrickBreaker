@@ -10,6 +10,7 @@ public class Arrow {
 	float arrowAngle;
 	Point2D.Float arrowLocation;
 	boolean visibility;
+//TODO: make arrow have angles using 2darc
 //constructor
 	public Arrow() {
 		float arrowAngle = 0;

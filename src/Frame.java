@@ -10,12 +10,20 @@ public class Frame extends JFrame{
 	State state = null;
 	public static final int height = 810;
 	public static final int width = 810;
+	JFrame frame = new JFrame();
+	JPanel panel = new JPanel();
 //constructors
 	public Frame(final BrickBreaker brickBreaker) throws HeadlessException{
-		theComponent = new TheComponent(brickBreaker);
-		state = new State();
-		JFrame frame = new JFrame();
-		JPanel panel = new JPanel();
+		frame.add(panel);
+		frame.setSize(height, width);
+		frame.setVisible(true);
+		frame.setResizable(false);
+		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		panel.setVisible(true);
+		Dimension panelPrefSize = new Dimension(800,800);
+		panel.setPreferredSize(panelPrefSize);
+		Dimension framePrefSize = new Dimension(810,810);
+//		panel.setBackground(Color.CYAN);
 		Ball ball = new Ball();
 		Board board = new Board();
 		float ballStartHeight = 5;
@@ -23,11 +31,9 @@ public class Frame extends JFrame{
 		float boardX = board.xPos;
 		board.setXPos(boardStartPos);
 		ball.setBallLoc(boardX, ballStartHeight);
-		frame.add(panel);
-		frame.setSize(height,width);
-		frame.setVisible(true);
-		frame.setResizable(false);
-		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+		theComponent = new TheComponent(brickBreaker);
+		state = new State();
 	}
 //getters
 	public int getHeight(){
@@ -36,4 +42,5 @@ public class Frame extends JFrame{
 	public int getWidth(){
 		return width;
 	}
+	public JPanel getJPanel(){return panel;}
 }
