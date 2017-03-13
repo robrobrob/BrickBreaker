@@ -12,6 +12,7 @@ import java.awt.geom.Point2D;
 public class TheComponent extends JComponent {
 	public BrickBreaker brickBreaker;
 	public PlaySpace space;
+//Constructor
 	public TheComponent(BrickBreaker brickBreaker){
 		this.brickBreaker = brickBreaker;
 		space = brickBreaker.getPlaySpace();

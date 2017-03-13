@@ -5,7 +5,7 @@ public class PlaySpace {
 	private float height;
 	private float width;
 
-
+//contructor
 	public PlaySpace() {
 		this.height = height;
 		this.width = width;

@@ -10,6 +10,7 @@ public class Frame extends JFrame{
 	State state = null;
 	public static final int height = 810;
 	public static final int width = 810;
+//constructors
 	public Frame(final BrickBreaker brickBreaker) throws HeadlessException{
 		theComponent = new TheComponent(brickBreaker);
 		state = new State();
@@ -28,6 +29,7 @@ public class Frame extends JFrame{
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	}
+//getters
 	public int getHeight(){
 		return height;
 	}
