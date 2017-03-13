@@ -7,6 +7,7 @@ import java.awt.geom.Point2D;
 public class Board {
 	float xPos;
 	boolean canMove;
+//constructors
 	public Board(){
 		xPos = 500;
 		boolean canMove = false;
