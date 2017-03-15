@@ -9,7 +9,6 @@ public class Board {
 	boolean canMove;
 //constructors
 	public Board(){
-		xPos = 500;
 		boolean canMove = false;
 	}
 //getters

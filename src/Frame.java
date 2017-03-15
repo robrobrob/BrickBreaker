@@ -8,32 +8,33 @@ import java.awt.Component;
 public class Frame extends JFrame{
 	final TheComponent theComponent;
 	State state = null;
-	public static final int height = 810;
-	public static final int width = 810;
+	public static final int height = 720;
+	public static final int width = 720;
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
 //constructors
 	public Frame(final BrickBreaker brickBreaker) throws HeadlessException{
 		frame.add(panel);
+		theComponent = new TheComponent(brickBreaker);
+		Dimension compPrefSize = new Dimension(720,720);
+		theComponent.setPreferredSize(compPrefSize);
+		Dimension panelPrefSize = new Dimension(720,720);
+		panel.setPreferredSize(panelPrefSize);
+		state = new State();
+		frame.setOpacity(1);
+		panel.setOpaque(true);
 		frame.setSize(height, width);
-		frame.setVisible(true);
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		panel.setVisible(true);
-		Dimension panelPrefSize = new Dimension(800,800);
-		panel.setPreferredSize(panelPrefSize);
-		Dimension framePrefSize = new Dimension(810,810);
-//		panel.setBackground(Color.CYAN);
 		Ball ball = new Ball();
 		Board board = new Board();
-		float ballStartHeight = 5;
-		float boardStartPos = 500;
+		float ballStartHeight = 25;
+		float boardStartPos = 300;
 		float boardX = board.xPos;
 		board.setXPos(boardStartPos);
 		ball.setBallLoc(boardX, ballStartHeight);
-
-		theComponent = new TheComponent(brickBreaker);
-		state = new State();
+		frame.setVisible(true);
+		panel.setVisible(true);
 	}
 //getters
 	public int getHeight(){

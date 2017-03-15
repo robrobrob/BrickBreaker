@@ -12,15 +12,11 @@ import java.awt.geom.Point2D;
 public class TheComponent extends JComponent {
 	public BrickBreaker brickBreaker;
 	public PlaySpace space;
-//	public JFrame jFrame = brickBreaker.getFrame();
-//	public JPanel jPanel = brickBreaker.getFrame().getJPanel();
 //Constructor
 	public TheComponent(BrickBreaker brickBreaker){
 		this.brickBreaker = brickBreaker;
 		space = brickBreaker.getPlaySpace();
 		setFocusable(true);
-//		jPanel.
-		repaint();
 	}
 //TODO: make paintComponent actually get called.
 	@Override
