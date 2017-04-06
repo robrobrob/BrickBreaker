@@ -25,6 +25,7 @@ public class BrickBreaker {
 //constructor
 	public BrickBreaker(){
 		frame = new Frame(this);
+		theComponent = frame.getComponent();
 		frame.theComponent.setVisible(true);
 		space = new PlaySpace();
 		space.setHeight(700);
