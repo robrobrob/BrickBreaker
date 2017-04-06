@@ -30,6 +30,9 @@ public class Frame extends JFrame{
 		ball.setBallLoc(boardX, ballStartHeight);
 		frame.setVisible(true);
 		frame.add(BorderLayout.CENTER,theComponent);
+		JButton repaint = new JButton("Repaint");
+		repaint.setVisible(true);
+		frame.add(BorderLayout.SOUTH, repaint);
 	}
 //getters
 	public int getHeight(){
