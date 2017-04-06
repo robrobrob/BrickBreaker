@@ -10,7 +10,7 @@ public class Ball {
 	float ballAngle;
 	int speed;
 //consstructors
-	public Ball(){
+	public Ball() {
 		ballLoc = null;
 		ballAngle = 0;
 		speed = 0;

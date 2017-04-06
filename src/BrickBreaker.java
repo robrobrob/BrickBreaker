@@ -18,7 +18,6 @@ public class BrickBreaker implements ActionListener{
 	public Board board;
 	public Engine engine;
 	public Arrow arrow;
-	public TheComponent theComponent;
 //main
 	public static void main(String[] args) {
 		new BrickBreaker();
@@ -26,8 +25,6 @@ public class BrickBreaker implements ActionListener{
 //constructor
 	public BrickBreaker(){
 		frame = new Frame(this);
-		theComponent = frame.getComponent();
-		frame.theComponent.setVisible(true);
 	}
 //getters
 	public Frame getFrame(){return frame;}
@@ -36,8 +33,7 @@ public class BrickBreaker implements ActionListener{
 	public Board getBoard(){return board;}
 	public Engine getEngine(){return engine;}
 	public Arrow getArrow(){return arrow;}
-	public TheComponent getTheComponent(){return theComponent;}
 	public void actionPerformed(ActionEvent event){
-		frame.repaint();
+		frame.frame.repaint();
 	}
 }
