@@ -11,6 +11,5 @@ public class BallData {
 		this.speed = speed;
 		this.ballAngle = ballAngle;
 		this.ballLoc = ballLoc;
-
 	}
 }

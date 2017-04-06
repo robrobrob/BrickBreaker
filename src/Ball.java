@@ -9,6 +9,7 @@ public class Ball {
 	Point2D.Float ballLoc;
 	float ballAngle;
 	int speed;
+	BallData ballData;
 //consstructors
 	public Ball() {
 		ballLoc = null;
@@ -37,5 +38,9 @@ public class Ball {
 	}
 	public void setSpeed(int newSpeed){
 		speed = newSpeed;
+	}
+	public BallData makeBallData(){
+		ballData = new BallData(getBallLoc(),getBallAngle(),getSpeed());
+		return ballData;
 	}
 }
