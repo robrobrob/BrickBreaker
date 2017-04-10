@@ -13,11 +13,11 @@ public class Frame extends JFrame{
 //constructors
 	public Frame(final BrickBreaker brickBreaker) throws HeadlessException{
 		frame = new JFrame();
+		//Setup JFrame
 		frame.setVisible(true);
-		//frame.setOpacity(1);
-
+		frame.setOpacity(1);
 		frame.setSize(height, width);
-		//frame.setResizable(false);
+		frame.setResizable(false);
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		/*
 		Ball ball = new Ball();
