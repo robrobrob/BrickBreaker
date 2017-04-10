@@ -29,8 +29,9 @@ public class TheComponent extends JPanel {
 		g2.setPaint(gradient);
 		g2.fillRect(100,100,500,500);
 		*/
-		g.setColor(Color.BLACK);
-		g.fillRect(0,0,100,100);
+		g2.setColor(Color.BLACK);
+		g2.drawLine();
+
 	}
 //TODO: Finish draw ball, board, others.
 	private void drawBall(Graphics g){
