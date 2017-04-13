@@ -5,20 +5,19 @@ import java.awt.Component;
 /**
  * Created by Robert on 3/10/17.
  */
-public class Frame extends JFrame{
+public class Frame extends JFrame implements JPanel{
 	public static final int height = 720;
 	public static final int width = 720;
-	JFrame frame;
+	JPanel panel;
 	TheComponent theComponent;
 //constructors
 	public Frame(final BrickBreaker brickBreaker) throws HeadlessException{
-		frame = new JFrame();
 		//Setup JFrame
-		frame.setVisible(true);
-		frame.setOpacity(1);
-		frame.setSize(height, width);
-		frame.setResizable(false);
-		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		setVisible(true);
+		setOpacity(1);
+		setSize(width, height);
+		setResizable(false);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		/*
 		Ball ball = new Ball();
 		Board board = new Board();
@@ -29,11 +28,11 @@ public class Frame extends JFrame{
 		ball.setBallLoc(boardX, ballStartHeight);
 		*/
 		theComponent = new TheComponent();
-		frame.getContentPane().add(BorderLayout.CENTER,theComponent);
+		getContentPane().add(BorderLayout.CENTER, theComponent);
 		JButton repaint = new JButton("Repaint");
 		repaint.setVisible(true);
-		frame.getContentPane().add(BorderLayout.SOUTH,repaint);
-		frame.add(BorderLayout.SOUTH, repaint);
+		getContentPane().add(BorderLayout.SOUTH,repaint);
+		add(BorderLayout.SOUTH, repaint);
 	}
 //getters
 	public int getHeight(){

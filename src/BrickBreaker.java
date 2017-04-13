@@ -34,6 +34,6 @@ public class BrickBreaker implements ActionListener{
 	public Engine getEngine(){return engine;}
 	public Arrow getArrow(){return arrow;}
 	public void actionPerformed(ActionEvent event){
-		frame.frame.repaint();
+		frame.repaint();
 	}
 }
