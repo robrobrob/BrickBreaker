@@ -5,7 +5,7 @@ import java.awt.Component;
 /**
  * Created by Robert on 3/10/17.
  */
-public class Frame extends JFrame implements JPanel{
+public class Frame extends JFrame{
 	public static final int height = 720;
 	public static final int width = 720;
 	JPanel panel;
